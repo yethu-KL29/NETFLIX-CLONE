@@ -13,34 +13,42 @@ function Signup() {
        <div className='heading'>
            <div className='logo'>
             <img src={Logo}></img>
+            <Button variant='contained' sx={{
+              backgroundColor:"red",
+              width:30,
+              height:30,
+              marginTop:1
+            }}>Login</Button>
            </div>
        </div>  
        <div className='writings'>
            
-              <h1>Unlimited movies, TV shows and more.</h1>
-              <h4>Watch anywhere. Cancel anytime.</h4>
-              <h6>
+              <h1>Unlimited movies,TV </h1>
+              <h1>shows and more.</h1>
+              <h3>Watch anywhere. Cancel anytime.</h3>
+              <h4>
                 Ready to watch? Enter your email to create or restart membership.
-              </h6>
+              </h4>
        </div>
             <div className='input'>
               <form>
-              <Box className='form' bgcolor='white'>
-                  <Typography  sx=
-                  {{
-                    fontSize:30,
-                    backgroundColor:'blue',
-                    fontWeight:900
-                   }}>{isSignUp? "Login":"SignUp"}</Typography>
+            
+                  
               
-              { !isSignUp && 
-                 <TextField name='name'    placeholder='name' sx={{width:400}}/>}
-                  <TextField name='email'    type={'email'} placeholder='email' sx={{width:400}}/>
-                  <TextField name='password'   type={'password'} placeholder='password' sx={{width:400}}/>
-                  <Button type='submit' variant='contained' color='warning'>Submit</Button>
-                  <Button  variant='outlined' onClick={()=>{setisSignUp(!isSignUp)}} >Change to {isSignUp? "SignUp":"Login"}</Button>
+                  <div>
+                  <TextField name='email'    type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
+                  <TextField name='password'    type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
+                  </div>
+                  <Button type='submit' variant='contained' sx={{
+                    backgroundColor: "red",
+                   width:200,
+                   marginX:40,
+                   marginTop:2,
+                   padding: 1,
+                  }}>Get Started</Button>
                 
-                </Box>
+                
+               
               </form>
 
              </div>

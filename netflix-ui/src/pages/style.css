@@ -10,16 +10,26 @@
 }
 .writings{
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 30%;
+    left: 35%;
     color: aliceblue;
 }
 .input{
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 50%;
+    left: 30%;
     color: aliceblue;
 }
 .logo img{
     height: 50px;
 }
+h1{
+    font-size: 50px;
+    width: 500px;
+}
+.logo{
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+}
+
