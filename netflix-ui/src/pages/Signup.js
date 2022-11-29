@@ -7,6 +7,25 @@ import { Box } from '@mui/system'
 import { useState } from 'react'
 function Signup() {
   const [isSignUp, setisSignUp] = useState(false)
+  const [input, setinput] = useState({
+    email: "",
+    password: "",
+  })
+  const handleChange = (e) => {
+    setinput({
+      ...input,
+      [e.target.name]: e.target.value
+    })
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(input)
+    
+  }
+
+
+
+
   return (
     <div className='signup'>
       <BackgroundImage></BackgroundImage>
@@ -35,11 +54,11 @@ function Signup() {
              
             
       <div className='input'>      
-       <form className='form'>
+       <form onSubmit={handleSubmit}>
                  
-            <TextField name='email' type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
-            { isSignUp ? <TextField name='password'    type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
-            :  <Button onClick={()=>{setisSignUp(true)}} type='submit' variant='contained' sx={{
+            <TextField value={input.email} name='email' onChange={handleChange} type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
+            { isSignUp ? <TextField value={input.password} name='password' onChange={handleChange}   type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
+            : <Button onClick={()=>{setisSignUp(true)}} type='submit' variant='contained' sx={{
               backgroundColor: "red",
              width:200,
              padding: 2
