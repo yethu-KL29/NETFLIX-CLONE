@@ -10,6 +10,7 @@ function Signup() {
   return (
     <div className='signup'>
       <BackgroundImage></BackgroundImage>
+ 
        <div className='heading'>
            <div className='logo'>
             <img src={Logo}></img>
@@ -30,30 +31,29 @@ function Signup() {
                 Ready to watch? Enter your email to create or restart membership.
               </h4>
        </div>
-            <div className='input'>
-              <form>
+          
+             
             
-                  
-              
-                  <div>
-                  <TextField name='email'    type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
-                  <TextField name='password'    type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
-                  </div>
-                  <Button type='submit' variant='contained' sx={{
-                    backgroundColor: "red",
-                   width:200,
-                   marginX:40,
-                   marginTop:2,
-                   padding: 1,
-                  }}>Get Started</Button>
-                
-                
-               
-              </form>
-
-             </div>
-      
+      <div className='input'>      
+       <form className='form'>
+                 
+            <TextField name='email' type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
+            { isSignUp ? <TextField name='password'    type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
+            :  <Button onClick={()=>{setisSignUp(true)}} type='submit' variant='contained' sx={{
+              backgroundColor: "red",
+             width:200,
+             padding: 2
+            }}>Get Started</Button>}
+           
+                 
+      </form>
+      <div className='button'>
+           <Button sx={{backgroundColor:'red'}} variant='contained'>Submit</Button>
+      </div>
+      </div> 
     </div>
+      
+   
   )
 }
 

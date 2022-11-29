@@ -10,16 +10,18 @@
 }
 .writings{
     position: absolute;
-    top: 30%;
-    left: 35%;
+    display: flex;
+    margin-left: 10vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+    top: 30vh;
+   
     color: aliceblue;
 }
-.input{
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    color: aliceblue;
-}
+
+
 .logo img{
     height: 50px;
 }
@@ -31,5 +33,28 @@ h1{
     width: 95vw;
     display: flex;
     justify-content: space-between;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+   
+}
+.button{
+    position:absolute;
+    top: 57%;
+    left: 45%;
+}
+.form{
+    display: flex;
+    margin-left: 10vw;
+    justify-content: center;
+    width: 70vw;
+    gap: 0px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+  
+    color: aliceblue;
+    
 }
 
