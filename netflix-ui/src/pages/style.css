@@ -44,7 +44,7 @@ h1{
     top: 57%;
     left: 45%;
 }
-.form{
+form{
     display: flex;
     margin-left: 10vw;
     justify-content: center;
