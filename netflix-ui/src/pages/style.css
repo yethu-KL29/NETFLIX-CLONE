@@ -34,15 +34,12 @@ h1{
     display: flex;
     justify-content: space-between;
 }
-.input{
-    display: flex;
-    flex-direction: column;
-   
-}
+
 .button{
     position:absolute;
-    top: 57%;
+    top: 65%;
     left: 45%;
+    margin-top: 25px;
 }
 form{
     display: flex;
@@ -53,6 +50,7 @@ form{
     display: flex;
     position: absolute;
     top: 50%;
+
   
     color: aliceblue;
     
