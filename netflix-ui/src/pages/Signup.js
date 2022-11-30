@@ -1,6 +1,7 @@
 import React from 'react'
 import BackgroundImage from '../components/BackgroundImage'
 import "./style.css"
+import axios from 'axios'
 import Logo from "../components/Logo.png"
 import { Button, Input, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system'
@@ -11,6 +12,21 @@ function Signup() {
     email: "",
     password: "",
   })
+  const sendRequest = async () => {
+    const res = await axios.post("http://localhost:5000/user/register", {
+      email:String( input.email),
+      password: String(input.password)
+    })
+    
+   .catch((err) => {
+      console.log(err)
+    }
+    )
+    const data = res.data
+    return data
+   
+  }
+
   const handleChange = (e) => {
     setinput({
       ...input,
@@ -19,8 +35,7 @@ function Signup() {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(input)
-    console.log("clicked")
+    sendRequest().then((data)=>console.log(data.user))
     
   }
 
@@ -57,8 +72,8 @@ function Signup() {
        
        <form onSubmit={handleSubmit}>
        <div className='input'>    
-            <TextField value={input.email} name='email' onChange={handleChange} type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
-            { isSignUp ? <TextField value={input.password} name='password' onChange={handleChange}   type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
+            <TextField required id="email" value={input.email} name='email' onChange={handleChange} type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
+            { isSignUp ? <TextField  required id="password" value={input.password} name='password' onChange={handleChange}   type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
             : <Button onClick={()=>{setisSignUp(true)}} variant='contained' sx={{
               backgroundColor: "red",
              width:200,
@@ -69,7 +84,7 @@ function Signup() {
            <div className='button'>
            <Button sx={{backgroundColor:'red'}}  type='submit' variant='contained'>Submit</Button>
            </div>
-               
+
       </form>
      
      
