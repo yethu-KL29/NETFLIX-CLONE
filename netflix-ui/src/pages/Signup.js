@@ -20,6 +20,7 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(input)
+    console.log("clicked")
     
   }
 
@@ -53,23 +54,25 @@ function Signup() {
           
              
             
-      <div className='input'>      
+       
        <form onSubmit={handleSubmit}>
-                 
+       <div className='input'>    
             <TextField value={input.email} name='email' onChange={handleChange} type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
             { isSignUp ? <TextField value={input.password} name='password' onChange={handleChange}   type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
-            : <Button onClick={()=>{setisSignUp(true)}} type='submit' variant='contained' sx={{
+            : <Button onClick={()=>{setisSignUp(true)}} variant='contained' sx={{
               backgroundColor: "red",
              width:200,
              padding: 2
             }}>Get Started</Button>}
-           
-                 
+            </div> 
+
+           <div className='button'>
+           <Button sx={{backgroundColor:'red'}}  type='submit' variant='contained'>Submit</Button>
+           </div>
+               
       </form>
-      <div className='button'>
-           <Button sx={{backgroundColor:'red'}} variant='contained'>Submit</Button>
-      </div>
-      </div> 
+     
+     
     </div>
       
    
