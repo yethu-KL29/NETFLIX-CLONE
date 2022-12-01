@@ -1,12 +1,15 @@
 import React from 'react'
 import BackgroundImage from '../components/BackgroundImage'
 import "./style.css"
+import { Link } from 'react-router-dom';
 import axios from 'axios'
 import Logo from "../components/Logo.png"
 import { Button, Input, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 function Signup() {
+  const navigate  = useNavigate()
   const [isSignUp, setisSignUp] = useState(false)
   const [input, setinput] = useState({
     email: "",
@@ -21,9 +24,12 @@ function Signup() {
    .catch((err) => {
       console.log(err)
     }
+   
     )
+   
     const data = res.data
     return data
+    
    
   }
 
@@ -35,7 +41,9 @@ function Signup() {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    sendRequest().then((data)=>console.log(data.user))
+    sendRequest()
+    .then((data)=>console.log(data.user))
+    .then(()=>navigate("/netflix"))
     
   }
 
@@ -49,12 +57,12 @@ function Signup() {
        <div className='heading'>
            <div className='logo'>
             <img src={Logo}></img>
-            <Button variant='contained' sx={{
+            <Button LinkComponent={Link} to="/login" variant='contained' sx={{
               backgroundColor:"red",
               width:30,
               height:30,
               marginTop:1
-            }}>Login</Button>
+            }} >Login</Button>
            </div>
        </div>  
        <div className='writings'>
@@ -70,7 +78,7 @@ function Signup() {
              
             
        
-       <form onSubmit={handleSubmit}>
+       <form className='signupForm' onSubmit={handleSubmit}>
        <div className='input'>    
             <TextField required id="email" value={input.email} name='email' onChange={handleChange} type={'email'} placeholder='email' sx={{width:400,backgroundColor:"white"}}/>
             { isSignUp ? <TextField  required id="password" value={input.password} name='password' onChange={handleChange}   type={'password'} placeholder='password' sx={{width:400,backgroundColor:"white"}}/>
@@ -82,7 +90,7 @@ function Signup() {
             </div> 
 
            <div className='button'>
-           <Button sx={{backgroundColor:'red'}}  type='submit' variant='contained'>Submit</Button>
+           <Button  sx={{backgroundColor:'red'}}  type='submit' variant='contained'>Submit</Button>
            </div>
 
       </form>

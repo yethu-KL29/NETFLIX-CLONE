@@ -2,6 +2,7 @@
     position: relative;
 }
 
+
 .heading{
     position: absolute;
     top: 1%;
@@ -45,6 +46,7 @@ form{
     display: flex;
     margin-left: 10vw;
     justify-content: center;
+    align-items: center;
     width: 70vw;
     gap: 0px;
     display: flex;
@@ -54,5 +56,22 @@ form{
   
     color: aliceblue;
     
+}
+.form{
+    height: 400px;
+    width: 30vw;
+    background-color: #000000b0;
+    display: flex;
+    margin-top: 20vh;
+    margin-left: 30vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:  20px;
+}
+.formBox{
+    background-color: #000000b0;
+    display: flex;
+    gap: 10px;
 }
 
