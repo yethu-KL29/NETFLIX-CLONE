@@ -56,10 +56,12 @@ function Signup() {
        <div className='heading'>
            <div className='logo'>
             <img src={Logo}></img>
+            </div>
+            <div>
             <Button LinkComponent={Link} to="/login" variant='contained' sx={{
               backgroundColor:"red",
-              width:30,
-              height:30,
+              width:'5vw',
+              height:'3vh',
               marginTop:1
             }} >Login</Button>
            </div>

@@ -54,6 +54,8 @@ import { Link } from 'react-router-dom';function Login() {
        <div className='heading'>
            <div className='logo'>
             <img src={Logo}></img>
+            </div>
+            <div>
             <Button LinkComponent={Link} to="/" variant='contained' sx={{
               backgroundColor:"red",
               fontWeight:"bold",
@@ -61,20 +63,24 @@ import { Link } from 'react-router-dom';function Login() {
               height:30,
               marginTop:1
             }}>SignUp</Button>
+            </div>
         </div>
       <form className='form' onSubmit={handleSubmit}>
      
         <Typography variant='h3' sx={{color:'white',
-      fontWeight:800}}>Login</Typography>
+      fontWeight:800,
+      
+      }}>Login</Typography>
         <TextField onChange={handleChange} value={input.title} placeholder="Email"   name='email' sx={{
           backgroundColor:"white",
-          width:300,
+        
+          width:'20vw'
         
         
         }}/>
         <TextField onChange={handleChange} value={input.description} placeholder='password'  name='password'sx={{
            backgroundColor:"white",
-          width:300,
+          width:'20vw'
          
         }}/>
      
@@ -84,7 +90,7 @@ import { Link } from 'react-router-dom';function Login() {
      
     </form>
        </div>  
-       </div>  
+      
   )
 }
 

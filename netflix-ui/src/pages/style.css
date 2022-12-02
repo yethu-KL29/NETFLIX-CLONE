@@ -9,7 +9,7 @@
     left: 1%;
     color: aliceblue;
 }
-.writings{
+.signup .writings{
     position: absolute;
     display: flex;
     margin-left: 10vw;
@@ -24,14 +24,17 @@
 
 
 .logo img{
-    height: 80px;
+    height: 7vh;
+    width: 10vw;
+    
 }
 h1{
     font-size: 50px;
     width: 500px;
 }
 .logo{
-    width: 95vw;
+    height: 7vh;
+    width: 10vw;
     display: flex;
     justify-content: space-between;
 }
@@ -40,7 +43,52 @@ h1{
     position:absolute;
     top: 65%;
     left: 45%;
+    width: 5vw;
     margin-top: 25px;
+}
+
+.form{
+    height: 40vh;
+    width: 30vw;
+    background-color: #000000b0;
+    display: flex;
+    margin-left: 30vw;
+    flex-direction: column;
+    gap:  20px;
+}
+.formBox{
+    background-color: #000000b0;
+    display: flex;
+    width: 20vw;
+    gap: 10px;
+}
+/* .netflix{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+}
+.netflix .heading{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+   
+} */
+.signup .heading{
+    width: 96vw;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+.login .heading{
+    width: 96vw;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+.logout{
+   margin-left: 60%;
+   
 }
 form{
     display: flex;
@@ -52,38 +100,6 @@ form{
     display: flex;
     position: absolute;
     top: 50%;
-
-  
     color: aliceblue;
-    
-}
-.form{
-    height: 400px;
-    width: 30vw;
-    background-color: #000000b0;
-    display: flex;
-    margin-top: 20vh;
-    margin-left: 30vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:  20px;
-}
-.formBox{
-    background-color: #000000b0;
-    display: flex;
-    gap: 10px;
-}
-.netflix{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-}
-.netflix .heading{
-    width: 100vw;
-    display: flex;
-    align-items: center;
-}
-.nav{
     
 }
