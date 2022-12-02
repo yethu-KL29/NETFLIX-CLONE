@@ -1,8 +1,9 @@
 import React from 'react'
 import BackgroundImage from '../components/BackgroundImage'
-import { Button, Input, TextField, Typography ,InputLabel, Tab, Toolbar} from '@mui/material'
-import './style.css'
+import { Button, Input, TextField, Typography ,InputLabel, Tab,Tabs, Toolbar, AppBar} from '@mui/material'
+import "./style.css"
 import Logo from "../components/Logo.png"
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 
 function Netflix() {
   return (
@@ -14,11 +15,23 @@ function Netflix() {
            </div>
            <div className='nav'>
             <Toolbar>
-            <Tab>Home</Tab>
-            <Tab>Home</Tab>
-            <Tab>Home</Tab>
-            <Tab>Home</Tab>
+            <Tabs sx={{backgroundColor:"inherit"}}>
+            <Tab sx={{
+              color:"white",
+            }} label="Home"/>
+            <Tab  sx={{
+              color:"white",
+            }} label="Diarys"/>
+            <Tab  sx={{
+              color:"white",
+            }} label="Add"/>
+            <Tab  sx={{
+              color:"white",
+            }} label="Profile"/>
+            </Tabs>
             </Toolbar>
+
+       
            </div>
        </div>  
     </div>

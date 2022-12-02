@@ -79,7 +79,11 @@ form{
     height: 100vh;
     background-color: black;
 }
-.nav{
-    color: aliceblue;
+.netflix .heading{
+    width: 100vw;
+    display: flex;
+    align-items: center;
 }
-
+.nav{
+    
+}
