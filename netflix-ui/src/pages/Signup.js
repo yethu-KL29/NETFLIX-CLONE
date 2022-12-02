@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 import Logo from "../components/Logo.png"
 import { Button, Input, TextField, Typography } from '@mui/material'
-import { Box } from '@mui/system'
 import { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 function Signup() {

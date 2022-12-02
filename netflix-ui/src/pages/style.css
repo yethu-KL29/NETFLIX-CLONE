@@ -24,7 +24,7 @@
 
 
 .logo img{
-    height: 50px;
+    height: 80px;
 }
 h1{
     font-size: 50px;
@@ -73,5 +73,13 @@ form{
     background-color: #000000b0;
     display: flex;
     gap: 10px;
+}
+.netflix{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.nav{
+    color: aliceblue;
 }
 

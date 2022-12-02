@@ -7,8 +7,7 @@ import { Button, Input, TextField, Typography ,InputLabel} from '@mui/material'
 import { Box } from '@mui/system'
 import { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
-import Link from 'react-router-dom'
-function Login() {
+import { Link } from 'react-router-dom';function Login() {
   const navigate  = useNavigate()
   const [isSignUp, setisSignUp] = useState(false)
   const [input, setinput] = useState({
