@@ -47,7 +47,7 @@ h1{
     margin-top: 25px;
 }
 
-.form{
+.signup > .form{
     height: 40vh;
     width: 30vw;
     background-color: #000000b0;
@@ -62,25 +62,25 @@ h1{
     width: 20vw;
     gap: 10px;
 }
-/* .netflix{
+.netflix{
     width: 100vw;
     height: 100vh;
     background-color: black;
     display: flex;
 }
-.netflix .heading{
+.netflix > .heading{
     width: 100vw;
     display: flex;
     align-items: center;
    
-} */
-.signup .heading{
+}
+.signup > .heading{
     width: 96vw;
     display: flex;
     justify-content: space-between;
     margin-right: 5%;
 }
-.login .heading{
+.login > .heading{
     width: 96vw;
     display: flex;
     justify-content: space-between;
@@ -90,7 +90,7 @@ h1{
    margin-left: 60%;
    
 }
-form{
+.signup > form{
     display: flex;
     margin-left: 10vw;
     justify-content: center;
@@ -102,4 +102,26 @@ form{
     top: 50%;
     color: aliceblue;
     
+}
+.login > .form{
+   
+        height: 40vh;
+        width: 30vw;
+        background-color: #000000b0;
+        display: flex;
+        margin-left: 30vw;
+        flex-direction: column;
+        gap:  20px;
+    }
+.login > form{
+    display: flex;
+    margin-left: 10vw;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    gap: 0px;
+    display: flex;
+    position: absolute;
+    top: 20%;
+    color: aliceblue;
 }
