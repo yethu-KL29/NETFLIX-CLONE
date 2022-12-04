@@ -58,9 +58,8 @@ import { Link } from 'react-router-dom';function Login() {
             <div>
             <Button LinkComponent={Link} to="/" variant='contained' sx={{
               backgroundColor:"red",
-              fontWeight:"bold",
-              width:30,
-              height:30,
+              width:70,
+              height:25,
               marginTop:1
             }}>SignUp</Button>
             </div>

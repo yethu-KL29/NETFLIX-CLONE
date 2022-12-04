@@ -63,16 +63,20 @@ h1{
     gap: 10px;
 }
 .netflix{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: black;
     display: flex;
 }
 .netflix > .heading{
-    width: 100vw;
+    width: 96vw;
     display: flex;
+    justify-content: space-between;
     align-items: center;
    
+}
+.nav{
+    display: flex;
 }
 .signup > .heading{
     width: 96vw;
@@ -87,7 +91,9 @@ h1{
     margin-right: 5%;
 }
 .logout{
-   margin-left: 60%;
+  width: 20vw;
+  display: flex;
+  gap: 10px;
    
 }
 .signup > form{
