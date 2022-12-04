@@ -7,15 +7,22 @@ import { useState } from 'react'
 import Logo from "../components/Logo.png"
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import { useNavigate } from 'react-router-dom'
-function Navbar() {
+function Navbar() { 
+
   const [value, setvalue] = useState()
   const navigate = useNavigate()  
   const handleLogout = () => {
 
     navigate('/login')
   }
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true)
+    return () => (window.onscroll = null)
+  }
   return (
-    <div className='netflix'>
+    <div className='netflix' isScrolled={isScrolled}>
     {/* <BackgroundImage></BackgroundImage> */}
         <div className='heading'>
       
