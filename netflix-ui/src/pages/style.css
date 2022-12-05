@@ -153,3 +153,26 @@ h1{
     top: 20%;
     color: aliceblue;
 }
+.netflix-main > .content{
+    position: absolute;
+    top: 60%;
+    left: 5rem;
+    color: aliceblue;
+    font-size: 100px;
+    font-weight: 900;
+    display: flex;
+   gap: 20px;
+    flex-direction: column;
+}
+.content > p{
+  height: 8vh;
+}
+.HomeButt{
+    display: flex;
+    gap: 10px;
+    width: 20vw;
+}
+iframe{
+    height: 100vh;
+    width: 100vw;
+}

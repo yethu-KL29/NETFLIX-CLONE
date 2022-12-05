@@ -1,5 +1,5 @@
 import React from 'react'
-import BackgroundImage from '../components/BackgroundImage'
+import HomeImage from '../components/Home'
 import { Button, Input, TextField, Typography ,InputLabel, Tab,Tabs, Toolbar, AppBar, IconButton} from '@mui/material'
 import "./style.css"
 import Searchbar from './Searchbar'
@@ -16,7 +16,7 @@ function Navbar() {
     navigate('/login')
   }
   const changeColor = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 10) {
       setcolor(true)
     } else {
       setcolor(false)
@@ -27,7 +27,7 @@ function Navbar() {
 
   return (
     <div className='netflix'>
-    <BackgroundImage></BackgroundImage>
+       <HomeImage></HomeImage>
         <div className={color? 'heading-bg':'heading'}>
       
         
