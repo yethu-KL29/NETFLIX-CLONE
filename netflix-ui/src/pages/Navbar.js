@@ -8,23 +8,27 @@ import Logo from "../components/Logo.png"
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import { useNavigate } from 'react-router-dom'
 function Navbar() { 
-
+  const [color, setcolor] = useState(false)
   const [value, setvalue] = useState()
   const navigate = useNavigate()  
   const handleLogout = () => {
 
     navigate('/login')
   }
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  window.onscroll = () => {
-    setIsScrolled(window.pageYOffset === 0 ? false : true)
-    return () => (window.onscroll = null)
+  const changeColor = () => {
+    if (window.scrollY >= 100) {
+      setcolor(true)
+    } else {
+      setcolor(false)
+    }
   }
+  window.addEventListener('scroll', changeColor)
+  
+
   return (
-    <div className='netflix' isScrolled={isScrolled}>
-    {/* <BackgroundImage></BackgroundImage> */}
-        <div className='heading'>
+    <div className='netflix'>
+    <BackgroundImage></BackgroundImage>
+        <div className={color? 'heading-bg':'heading'}>
       
         
 

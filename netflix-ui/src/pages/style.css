@@ -63,18 +63,39 @@ h1{
     gap: 10px;
 }
 .netflix{
-    width: 100%;
+    width: 100vw;
     height: 200vh;
     background-color: black;
     display: flex;
     overflow: scroll;
+  
+   
 }
 .netflix > .heading{
-    width: 96vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    
+}
+.heading-bg{
+    background-color: #000000b0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    background-color: #000000b0;
+
 }
 .nav{
     display: flex;
