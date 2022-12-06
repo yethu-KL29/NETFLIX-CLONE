@@ -64,10 +64,10 @@ h1{
 }
 .netflix{
     width: 100vw;
-    height: 200vh;
+    overflow-x: hidden;
     background-color: black;
     display: flex;
-    overflow: scroll;
+    
   
    
 }
@@ -163,6 +163,7 @@ h1{
     display: flex;
    gap: 20px;
     flex-direction: column;
+    overflow-x: hidden;
 }
 .content > p{
   height: 8vh;
@@ -174,5 +175,10 @@ h1{
 }
 iframe{
     height: 100vh;
+    width: 100vw;
+}
+.list{
+    background-color: black;
+    height: 500vh;
     width: 100vw;
 }
