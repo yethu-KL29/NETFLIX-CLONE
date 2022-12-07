@@ -15,7 +15,6 @@ function List() {
   return (
     <div className='list'>
         <span className='listTitle'>Continue to watch</span>
-       
         <div className='items'>
         <Carousel breakPoints={breakPoints}>
           <ListItem></ListItem>
