@@ -1,15 +1,23 @@
 import React from 'react'
 import "./List.css"
+import Carousel from "react-elastic-carousel"
 import ListItem from '../ListItem/ListItem'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
+  { width: 1500, itemsToShow: 5 },
+];
 
 function List() {
   return (
     <div className='list'>
         <span className='listTitle'>Continue to watch</span>
-        <div className='wrapper'>
+       
         <div className='items'>
+        <Carousel breakPoints={breakPoints}>
           <ListItem></ListItem>
           <ListItem></ListItem>
           <ListItem></ListItem>
@@ -21,6 +29,9 @@ function List() {
           <ListItem></ListItem>
           <ListItem></ListItem>
           <ListItem></ListItem>
+      
+          </Carousel>
+          <Carousel breakPoints={breakPoints}>
           <ListItem></ListItem>
           <ListItem></ListItem>
           <ListItem></ListItem>
@@ -30,11 +41,28 @@ function List() {
           <ListItem></ListItem>
           <ListItem></ListItem>
           <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+      
+          </Carousel>
+          <Carousel breakPoints={breakPoints}>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+      
+          </Carousel>
         </div>
-         <ArrowBackIosIcon sx={{color:"white",backgroundColor:"red"}} className='sliderArrow-left'/>
-        <ArrowForwardIosIcon sx={{color:"white",backgroundColor:"red"}} className='sliderArrow-right'/>
+        
       </div>
-    </div>
+  
   )
 }
 
