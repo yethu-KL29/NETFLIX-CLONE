@@ -15,7 +15,9 @@ const register=async(req,res,next)=>{
         const hashedPass= bcrypt.hashSync(password)
         user = new User({
             email,
-            password:hashedPass
+            password:hashedPass,
+            
+
          })
         await user.save()
     } catch (error) {

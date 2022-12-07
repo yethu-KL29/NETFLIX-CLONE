@@ -8,3 +8,10 @@
 
     
 }
+.list{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    color: aliceblue;
+}
