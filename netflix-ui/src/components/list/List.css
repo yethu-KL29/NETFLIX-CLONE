@@ -1,4 +1,26 @@
+.wrapper{
+     width: 100vw;
+     display: grid;
+     position:relative;
+    background-color: #000;
+}
 .items{
-    display: flex;
-    gap: 20px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    position:relative;
+    margin:0%;
+
+    
+}
+.sliderArrow-left{
+ position: absolute;  
+ left: 10%;
+   
+   
+}
+.sliderArrow-right{
+    position: absolute;
+    right: 10%;
 }
