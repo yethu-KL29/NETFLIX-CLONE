@@ -74,6 +74,30 @@ const login = async(req,res,next)=>{
    
 }
 
+const updateUser = async(req,res,next)=>{
+    const {username,email} = req.body;
+    const id = req.user._id;
+    let user;
+    try{
+
+    user = await User.findByIdAndUpdate(id,{
+        username,
+        email,
+       
+
+    });
+    await user.save();
+    }catch(err){
+        console.log(err)
+    }
+    if(!user){
+        return res.status(400).json({msg: "User does not exist"})
+    }
+    return res.status(200).json({user})
+
+    
+}
 
 exports.register=register
 exports.login=login
+exports.updateUser=updateUser
