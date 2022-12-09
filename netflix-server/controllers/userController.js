@@ -85,7 +85,7 @@ const updateUser = async(req,res,next)=>{
         email,
        
 
-    });
+    } , {new:true});
     await user.save();
     }catch(err){
         console.log(err)
@@ -97,7 +97,37 @@ const updateUser = async(req,res,next)=>{
 
     
 }
-
+const deleteUser = async(req,res,next)=>{
+    const {username,email} = req.body;
+    const id = req.user._id;
+    let user;
+    try{
+        user= await User.findByIdAndDelete(id,{
+            username,
+            email,
+        })
+    }catch(err){
+        console.log(err)
+    }
+    if(!user){
+        return res.status(400).json({msg: "User does not exist"})
+    }
+    return res.status(200).json({user})
+}
+const getALLUsers = async(req,res,next)=>{
+    let users;
+    try{
+        users = await User.find()
+    }catch(err){
+        console.log(err)
+    }
+    if(!users){
+        return res.status(400).json({msg: "User does not exist"})
+    }
+    return res.status(200).json({users})
+}
+exports.getALLUsers=getALLUsers
 exports.register=register
 exports.login=login
 exports.updateUser=updateUser
+exports.deleteUser=deleteUser
