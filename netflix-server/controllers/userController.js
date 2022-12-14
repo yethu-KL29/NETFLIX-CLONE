@@ -70,7 +70,7 @@ const login = async(req,res,next)=>{
     if(isPasswordCorrect){
         return res.status(200).json({message:"successfully loggedin",user:info,token} )
     }
-    return res.status(404).json({message:"passwors is incorrect"})
+    return res.status(404).json({message:"password is incorrect"})
    
 }
 
@@ -126,6 +126,8 @@ const getALLUsers = async(req,res,next)=>{
     }
     return res.status(200).json({users})
 }
+
+
 
 const status = async(req,res,next)=>{
   const today = new Date();

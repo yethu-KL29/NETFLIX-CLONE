@@ -12,37 +12,44 @@ const movieSchema = new Schema(
         },
         img: {
             type: String,
-            required: true,
+            // required: true,
+            default: '',
         },
         imgTitle: {
             type: String,
-            required: true,
+            // required: true,
+            default: 'image',
         },
         imgSm: {
             type: String,
-            required: true,
+            // required: true,
+            default: '',
         },
         trailer: {
             type: String,
-            required: true,
+            // required: true,
+            default: '',
         },
         video: {
             type: String,
-            required: true,
+            // required: true,
         },
         year: {
             type: String,
-            required: true,
+            // required: true,
+            default: '',
         },
         
 
         limit: {
             type: Number,
-            required: true,
+            // required: true,
+            default: 0,
         },
         genre: {
             type: String,
-            required: true,
+            // required: true,
+            default: '',
         },
         isSeries: {
             type: Boolean,
