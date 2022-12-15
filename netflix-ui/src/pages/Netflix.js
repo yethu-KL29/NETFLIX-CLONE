@@ -6,11 +6,13 @@ import { useState } from 'react'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 import List from '../components/list/List';
-function Netflix() {
+import "./style.css"
+function Netflix({type}) {
   const style = { color: "black",
    fontSize: "1.5em",
    display: "flex",
   marginRight: "1vw",
+  
   }
   const navigate = useNavigate()
  const handlePlay=()=>{
@@ -20,13 +22,27 @@ function Netflix() {
   return (
    <div className='netflix-main'>
       <Navbar/>
+      <div className='genre'>
+           <span> {type ==='movie'? 'movie':'series'}</span>   
+           <select name='genre' id='genre'>
+              <option>Genre</option>
+              <option value='action'>Action</option>
+              <option value='comedy'>Comedy</option>
+              <option value='horror'>Horror</option>
+              <option value='romance'>Romance</option>
+              <option value='drama'>Drama</option>
+              <option value='documentary'>Documentary</option>
+              
+            </select>     
+         </div>
       <div className='content'>
+         
         <div>
         <p>STRANGER THINGS</p>
         </div>
         <div className='HomeButt'>
-        <Button onClick={handlePlay} sx={{backgroundColor:"white",color:'black'}} variant="contained" className='play'><GrPlayFill style={style} />Play</Button>
-        <Button sx={{backgroundColor:"white",color:'black'}} variant="contained" className='more'><SlInfo style={style}/>More info</Button>
+        <Button onClick={handlePlay} sx={{backgroundColor:"white",color:"black","&:hover": {backgroundColor: "white", }}}  className='play'><GrPlayFill style={style} />Play</Button>
+        <Button sx={{backgroundColor:"Gray",color:'black',"&:hover": {backgroundColor: "Gray"}}}  className='more'><SlInfo style={style}/>More info</Button>
         </div>
         
       </div>

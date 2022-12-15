@@ -155,13 +155,13 @@ h1{
 }
 .netflix-main > .content{
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 5rem;
     color: aliceblue;
     font-size: 100px;
     font-weight: 900;
     display: flex;
-   gap: 20px;
+    gap: 20px;
     flex-direction: column;
     overflow-x: hidden;
 }
@@ -181,4 +181,38 @@ iframe{
     background-color: black;
     height: 500vh;
     width: 100vw;
+} 
+
+.play{
+    background-color: white;
+}
+ .genre{
+  font-size: 30px;
+   font-weight: 500;
+  display: flex;
+  gap: 1vw;
+  position: absolute;
+  top: 10%;
+  left: 5vw;
+  
+}
+select{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+select:focus{
+    outline: none;
+}
+select:hover{
+    cursor: pointer;
+}
+option{
+    padding: 10px;
+    height: 10vh;
+
 }

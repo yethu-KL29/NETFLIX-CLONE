@@ -41,31 +41,20 @@ const deleteMovie = async (req, res, next) => {
 };
 
 const updateMovie = async (req, res, next) => {
-    if(req.user.isAdmin){
-        const { title, desc, img, imgTitle, imgSm, trailer, video, year, limit, genre, isSeries } = req.body;
+    // if(req.user.isAdmin){
         const id = req.params.id;
         try {
             const movie = await Movie.findByIdAndUpdate(id, {
-            title,
-            desc,
-            img,
-            imgTitle,
-            imgSm,
-            trailer,
-            video,
-            year,
-            limit,
-            genre,
-            isSeries,
+           $set:req.body
             }, { new: true });
             await movie.save();
             res.status(200).json({ movie });
         } catch (error) {
             console.log(error);
         }
-    }else{
-        res.status(401).json({message:"you are not allowed to update movie"})
-    }
+    // }else{
+    //     res.status(401).json({message:"you are not allowed to update movie"})
+    // }
 }
 
 const getMovie = async (req, res, next) => {
