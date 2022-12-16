@@ -6,7 +6,7 @@ import Searchbar from './Searchbar'
 import { useState } from 'react'
 import Logo from "../components/Logo.png"
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 function Navbar() { 
   const [color, setcolor] = useState(false)
   const [value, setvalue] = useState()
@@ -16,7 +16,7 @@ function Navbar() {
     navigate('/login')
   }
   const changeColor = () => {
-    if (window.scrollY >= 10) {
+    if (window.scrollY >= 20) {
       setcolor(true)
     } else {
       setcolor(false)
@@ -46,17 +46,24 @@ function Navbar() {
             color:"white",
             fontSize:'1.5vh',
           }} label="Home"/>
-          <Tab  sx={{
+
+          <Tab LinkComponent={Link} to="/series" sx={{
             color:"white",
             fontSize:'1.5vh',
-          }} label="TV Shows"/>
-          <Tab  sx={{
+          }} label="series"/>
+          
+          <Tab LinkComponent={Link} to="/movies"  sx={{
             color:"white",
             fontSize:'1.5vh'
           }} label="Movies"/>
+
           <Tab  sx={{
             color:"white",
             fontSize:'1.5vh'
+          }} label="popular"/>
+          <Tab  sx={{
+            color:"white",
+            fontSize:'1.5vh',
           }} label="My List"/>
          
           </Tabs>

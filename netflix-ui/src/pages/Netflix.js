@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import List from '../components/list/List';
 import "./style.css"
 function Netflix({type}) {
+  
   const style = { color: "black",
    fontSize: "1.5em",
    display: "flex",
@@ -18,12 +19,13 @@ function Netflix({type}) {
  const handlePlay=()=>{
    navigate('/player')
   }
-  
+ 
+
   return (
    <div className='netflix-main'>
       <Navbar/>
-      <div className='genre'>
-           <span> {type ==='movie'? 'movie':'series'}</span>   
+  { type && <div className='genre'>
+           <span> {type ==='movies'? 'movies':'series'}</span>   
            <select name='genre' id='genre'>
               <option>Genre</option>
               <option value='action'>Action</option>
@@ -34,7 +36,7 @@ function Netflix({type}) {
               <option value='documentary'>Documentary</option>
               
             </select>     
-         </div>
+         </div>}
       <div className='content'>
          
         <div>
