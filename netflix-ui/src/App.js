@@ -12,9 +12,12 @@ function App() {
     <div className="App">
     <BrowserRouter>
       <Routes>
-        {user && <Route path="/" element={<Main/>}/>}
+       {!user && <Route path="/" element={<Signup/>}/>}
+        { user && 
+        <>
+         <Route path="/" element={<Main/>}/>
 
-        {!user && <Route path="/" element={<Signup/>}/>}
+      
 
         <Route path="/movies" element={<Main type="movies"/>}/>
 
@@ -23,6 +26,8 @@ function App() {
         <Route path="/login" element={<Login/>}/>
 
         <Route path="/player" element={<Player/>}/>
+        </>
+       } 
       </Routes>
     </BrowserRouter> 
     
