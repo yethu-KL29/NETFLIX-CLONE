@@ -7,3 +7,20 @@
     color: red;
     
 }
+
+.items{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    margin:0%;
+
+    
+}
+.list{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    color: aliceblue;
+}

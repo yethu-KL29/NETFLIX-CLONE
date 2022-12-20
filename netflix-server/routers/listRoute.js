@@ -8,6 +8,6 @@ const listRouter = express.Router();
 listRouter.post("/add",createList)
 listRouter.delete("/delete/:id",protect,deleteList)
 listRouter.put("/update/:id",protect,updateList)
-listRouter.get("/getlist",protect,getList)
+listRouter.get("/getlist",getList)
 
 module.exports = listRouter;

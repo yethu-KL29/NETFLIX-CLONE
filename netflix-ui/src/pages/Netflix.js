@@ -5,7 +5,6 @@ import Navbar from './Navbar'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
-import List from '../components/list/List';
 import "./style.css"
 function Netflix({type}) {
   
@@ -48,9 +47,7 @@ function Netflix({type}) {
         </div>
         
       </div>
-      <div className='list'>
-      <List></List>
-      </div>
+      
      
 
    

@@ -13,7 +13,7 @@ const movieSchema = new Schema(
         img: {
             type: String,
             // required: true,
-            default: '',
+            default:"https://m.media-amazon.com/images/M/MV5BNzU4NWEwNDItMzMzYy00ZDYyLWIxZjMtMDlkYWVjNjQwYzBjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
         },
         imgTitle: {
             type: String,
