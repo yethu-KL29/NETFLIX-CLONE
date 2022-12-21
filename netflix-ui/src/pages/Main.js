@@ -19,7 +19,7 @@ const Main = ({type}) => {
 
   const [List, setlist] = useState([])
   const [genre, setgenre] = useState(null)
-
+ 
 
  useEffect(() => {
   const getRandomList = async() => {
@@ -28,7 +28,8 @@ const Main = ({type}) => {
       )
       const data = res.data
       setlist(data.list)
-      console.log(data.list)
+     
+      console.log(List)
 
   }
   getRandomList()

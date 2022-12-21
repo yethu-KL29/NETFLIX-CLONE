@@ -13,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
        {!user && <Route path="/" element={<Signup/>}/>}
+       <Route path="/login" element={<Login/>}/>
         { user && 
         <>
          <Route path="/" element={<Main/>}/>
@@ -23,7 +24,7 @@ function App() {
 
         <Route path="/series" element={<Main type="series"/>}/>
 
-        <Route path="/login" element={<Login/>}/>
+      
 
         <Route path="/player" element={<Player/>}/>
         </>
