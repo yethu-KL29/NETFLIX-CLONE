@@ -24,12 +24,12 @@ const Main = ({type}) => {
  useEffect(() => {
   const getRandomList = async() => {
     const res = await axios.get(
-      `list/getlist${type ? "?type=" + type:""} ${genre ? "&genre=" + genre:""}`
+      `list/getlist${type ? "?type="+type : ""} ${genre ? "&genre=" + genre:""}`
       )
       const data = res.data
       setlist(data.list)
      
-      console.log(List)
+      console.log("list is "+List)
 
   }
   getRandomList()
