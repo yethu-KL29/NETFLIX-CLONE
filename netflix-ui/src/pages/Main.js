@@ -42,13 +42,14 @@ console.log(List)
       <Netflix type={type}/>
       <div className='list'>
         <span className='listTitle'>Continue to watch</span>
-        <div className='items'>
+        <div className='items' >
         <Carousel breakPoints={breakPoints}>
           
           {List && List.map((list,i)=>{
+            
       return(
        
-        <ListItem list={list}/>
+        <ListItem   list={list}/>
       )
     })}
       
