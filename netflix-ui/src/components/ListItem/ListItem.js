@@ -21,7 +21,7 @@ const ListItem = ({...props}) => {
  
   return (
     <div className='listitem'>
-       <h2>{movie.title}</h2>
+       <h2>{title}</h2>
        <h3>{type}</h3>
         <h3>{genre}</h3>
         <img src={movie.img}></img>
