@@ -19,8 +19,7 @@ const Main = ({type}) => {
 
   const [List, setlist] = useState([])
   const [genre, setgenre] = useState(null)
- 
-
+  const [content,setcontent] = useState([])
  useEffect(() => {
   const getRandomList = async() => {
     const res = await axios.get(
@@ -28,8 +27,11 @@ const Main = ({type}) => {
       )
       const data = res.data
       setlist(data.list)
+      setcontent(data.list.content)
      
-      console.log("list is "+List)
+      // console.log("list is "+List) 
+      console.log(content) 
+
 
   }
   getRandomList()
