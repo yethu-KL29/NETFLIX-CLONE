@@ -49,7 +49,7 @@ console.log(List)
             
       return(
        
-        <ListItem   list={list}/>
+        <ListItem   list={list} />
       )
     })}
       
