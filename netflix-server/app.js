@@ -22,7 +22,7 @@ app.use("/user",userRouter)
 app.use("/movie",movieRouter)
 app.use("/list",listRouter)
 
-
+mongoose.set("strictQuery", false);
  mongoose.connect(process.env.MONGO_URL)
 .then(console.log("DB connected"))
 .then(app.listen(5000,()=>console.log("server running on port 5000")))
